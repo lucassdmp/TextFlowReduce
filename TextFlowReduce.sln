@@ -5,6 +5,16 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextFlowReduce", "TextReduce\TextFlowReduce.csproj", "{644BEF4A-1331-48A2-A01F-E11E1809A808}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E7A297EE-9F77-4322-85BF-97783CC32B26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextFlowReduce.Tests", "TextFlowReduce.Tests\TextFlowReduce.Tests.csproj", "{58E939E1-FE32-45AF-819B-DE6797E581CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{7DE5D9F4-8D90-403D-8C9D-5433D7C61B27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextFlowReduce.Samples", "TextFlowReduce.Samples\TextFlowReduce.Samples.csproj", "{94C5C3F8-5DF0-4CC8-8D5B-BABBFA6F7E26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +25,22 @@ Global
 		{644BEF4A-1331-48A2-A01F-E11E1809A808}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{644BEF4A-1331-48A2-A01F-E11E1809A808}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{644BEF4A-1331-48A2-A01F-E11E1809A808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E939E1-FE32-45AF-819B-DE6797E581CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E939E1-FE32-45AF-819B-DE6797E581CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E939E1-FE32-45AF-819B-DE6797E581CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E939E1-FE32-45AF-819B-DE6797E581CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94C5C3F8-5DF0-4CC8-8D5B-BABBFA6F7E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C5C3F8-5DF0-4CC8-8D5B-BABBFA6F7E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94C5C3F8-5DF0-4CC8-8D5B-BABBFA6F7E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94C5C3F8-5DF0-4CC8-8D5B-BABBFA6F7E26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{644BEF4A-1331-48A2-A01F-E11E1809A808} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{58E939E1-FE32-45AF-819B-DE6797E581CF} = {E7A297EE-9F77-4322-85BF-97783CC32B26}
+		{94C5C3F8-5DF0-4CC8-8D5B-BABBFA6F7E26} = {7DE5D9F4-8D90-403D-8C9D-5433D7C61B27}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {60A167E7-3F16-4D1F-9A6F-EA1F4963F19E}
