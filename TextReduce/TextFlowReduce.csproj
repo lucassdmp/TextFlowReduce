@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Extensions\ParagraphFunctions\" />
+    <Folder Include="Extensions\PhraseFunctions\" />
+    <Folder Include="Extensions\WordFunctions\" />
+  </ItemGroup>
+
 </Project>
