@@ -42,7 +42,6 @@ namespace TextFlowReduce.Core.Analyzers
             var phrases = phraseTask.Result;
             var paragraphs = paragraphTask.Result;
 
-            // Analyze each content type in parallel
             var wordAnalysisTask = Task.Run(() => AnalyzeContent(words.Keys, wordAnalyzers));
             var phraseAnalysisTask = Task.Run(() => AnalyzeContent(phrases, phraseAnalyzers));
             var paragraphAnalysisTask = Task.Run(() => AnalyzeContent(paragraphs, paragraphAnalyzers));
