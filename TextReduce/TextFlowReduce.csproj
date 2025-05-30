@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\ParagraphFunctions\" />
-    <Folder Include="Extensions\PhraseFunctions\" />
-    <Folder Include="Extensions\WordFunctions\" />
+    <Compile Remove="Extensions\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <None Remove="Extensions\**" />
   </ItemGroup>
 
 </Project>
