@@ -7,13 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Core\Mappers\**" />
     <Compile Remove="Extensions\**" />
+    <EmbeddedResource Remove="Core\Mappers\**" />
     <EmbeddedResource Remove="Extensions\**" />
+    <None Remove="Core\Mappers\**" />
     <None Remove="Extensions\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Core\Mappers\" />
   </ItemGroup>
 
 </Project>
