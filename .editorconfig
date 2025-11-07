@@ -1,0 +1,20 @@
+root = true
+
+[*.{cs,csproj,sln,cshtml,razor}]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = tab
+indent_size = tab
+
+[*.{js,ts,jsx,tsx,json,html,css,scss,md}]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = tab
+indent_size = tab
+
+[*.md]
+trim_trailing_whitespace = false

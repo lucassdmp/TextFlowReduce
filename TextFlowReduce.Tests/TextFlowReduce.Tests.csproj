@@ -21,4 +21,8 @@
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TextReduce\TextFlowReduce.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -12,4 +12,8 @@
     <None Remove="Extensions\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Core\Mappers\" />
+  </ItemGroup>
+
 </Project>
