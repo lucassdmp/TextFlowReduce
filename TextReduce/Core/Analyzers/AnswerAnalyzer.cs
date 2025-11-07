@@ -199,6 +199,7 @@ namespace TextFlowReduce.Core.Analyzers
 		: 0;
 		}
 
+
 		/// <summary>
 		/// Calcula o score final baseado nos pesos
 		/// </summary>
