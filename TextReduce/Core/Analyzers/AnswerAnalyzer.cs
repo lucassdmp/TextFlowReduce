@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using TextFlowReduce.Core.Models;
 
 namespace TextFlowReduce.Core.Analyzers
@@ -117,20 +119,25 @@ namespace TextFlowReduce.Core.Analyzers
 				return;
 			}
 
-			foreach (var keyword in requiredKeywords)
+			var foundKeywords = new ConcurrentBag<string>();
+			var missingKeywords = new ConcurrentBag<string>();
+
+			Parallel.ForEach(requiredKeywords, keyword =>
 			{
 				string normalizedKeyword = NormalizeText(keyword);
 
-
 				if (Regex.IsMatch(normalizedAnswer, $@"\b{Regex.Escape(normalizedKeyword)}\b"))
 				{
-					result.FoundRequiredKeywords.Add(keyword);
+					foundKeywords.Add(keyword);
 				}
 				else
 				{
-					result.MissingRequiredKeywords.Add(keyword);
+					missingKeywords.Add(keyword);
 				}
-			}
+			});
+
+			result.FoundRequiredKeywords = foundKeywords.ToList();
+			result.MissingRequiredKeywords = missingKeywords.ToList();
 
 			result.RequiredKeywordsScore = requiredKeywords.Count > 0
 		   ? (result.FoundRequiredKeywords.Count * 100.0 / requiredKeywords.Count)
@@ -151,19 +158,25 @@ namespace TextFlowReduce.Core.Analyzers
 				return;
 			}
 
-			foreach (var phrase in requiredPhrases)
+			var foundPhrases = new ConcurrentBag<string>();
+			var missingPhrases = new ConcurrentBag<string>();
+
+			Parallel.ForEach(requiredPhrases, phrase =>
 			{
 				string normalizedPhrase = NormalizeText(phrase);
 
 				if (normalizedAnswer.Contains(normalizedPhrase))
 				{
-					result.FoundRequiredPhrases.Add(phrase);
+					foundPhrases.Add(phrase);
 				}
 				else
 				{
-					result.MissingRequiredPhrases.Add(phrase);
+					missingPhrases.Add(phrase);
 				}
-			}
+			});
+
+			result.FoundRequiredPhrases = foundPhrases.ToList();
+			result.MissingRequiredPhrases = missingPhrases.ToList();
 
 			result.RequiredPhrasesScore = requiredPhrases.Count > 0
 	  ? (result.FoundRequiredPhrases.Count * 100.0 / requiredPhrases.Count)
@@ -184,15 +197,19 @@ namespace TextFlowReduce.Core.Analyzers
 				return;
 			}
 
-			foreach (var keyword in optionalKeywords)
+			var foundOptionalKeywords = new ConcurrentBag<string>();
+
+			Parallel.ForEach(optionalKeywords, keyword =>
 			{
 				string normalizedKeyword = NormalizeText(keyword);
 
 				if (Regex.IsMatch(normalizedAnswer, $@"\b{Regex.Escape(normalizedKeyword)}\b"))
 				{
-					result.FoundOptionalKeywords.Add(keyword);
+					foundOptionalKeywords.Add(keyword);
 				}
-			}
+			});
+
+			result.FoundOptionalKeywords = foundOptionalKeywords.ToList();
 
 			result.OptionalKeywordsScore = optionalKeywords.Count > 0
 	? (result.FoundOptionalKeywords.Count * 100.0 / optionalKeywords.Count)

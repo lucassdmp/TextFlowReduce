@@ -1,0 +1,11 @@
+ID,Área,Pergunta,Palavras Obrigatórias,Frases Obrigatórias,Palavras Opcionais,Resposta Padrão
+01,Progr.,O que é uma classe em POO?,"modelo, objetos, atributos",define atributos e métodos,"blueprint, instância",Uma classe é um modelo que define atributos e métodos para criar objetos.
+02,Progr.,Explique o conceito de Herança.,"derivada, herdar, base","herda comportamentos, classe base","superclasse, subclasse",Herança permite que uma classe derivada possa herdar comportamentos de uma classe base.
+03,Eng. Soft.,O que caracteriza o Acoplamento?,"dependência, módulos, software","nível de dependência, componentes de software","interdependência, baixo acoplamento",O acoplamento mede o nível de dependência entre diferentes módulos ou componentes de software.
+04,Redes,Qual a função do protocolo HTTP?,"protocolo, cliente, servidor","transferência de dados, navegador e servidor","hipertexto, stateless",É um protocolo que permite a transferência de dados entre um cliente (navegador) e um servidor.
+05,B. Dados,O que é uma Chave Primária?,"identificador, registro, tabela","identificador único, registro em uma tabela","PK, chave estrangeira",É um identificador único que garante que cada registro em uma tabela seja exclusivo.
+06,Hardware,Qual o papel da Memória RAM?,"volátil, processador, dados","acesso rápido, execução imediata","randômico, latência",É uma memória volátil de acesso rápido para dados de execução imediata pelo processador.
+07,Eng. Soft.,Defina Coesão em um código.,"classe, método, propósito","única responsabilidade, intimamente relacionadas","modularidade, SOLID",Coesão indica se as funções de uma classe estão intimamente relacionadas a um único propósito.
+08,Progr.,O que é Polimorfismo?,"objeto, formas, métodos","múltiplas implementações, mesmo método","sobrescrita, sobrecarga","Capacidade de um objeto assumir várias formas, permitindo múltiplas implementações de um mesmo método."
+09,Progr.,O que é o Encapsulamento?,"dados, acesso, métodos","modificadores de acesso, esconder detalhes","private, getters, setters","Técnica de proteger dados usando modificadores de acesso, para esconder detalhes internos do objeto."
+10,Progr.,Explique a Recursividade.,"chamada, função, parada","chama a si mesmo, condição de parada","caso base, stack","Ocorre quando uma função chama a si mesmo, exigindo uma condição de parada para terminar."
